@@ -26,6 +26,7 @@ function App() {
                     <Sidebar/>
                     <AppRouter/>
                 </div>
+                
             </Suspense>
           
         </div>
