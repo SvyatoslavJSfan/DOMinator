@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 /* eslint-disable import/no-extraneous-dependencies */
 import { render, screen } from '@testing-library/react'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
