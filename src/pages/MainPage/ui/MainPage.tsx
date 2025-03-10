@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
     const { t } = useTranslation();
-    console.log('hi');
     
 
     return (
