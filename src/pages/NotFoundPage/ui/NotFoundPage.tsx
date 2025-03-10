@@ -10,6 +10,9 @@ interface NotFoundPageProps {
 export const NotFoundPage = ({ className }: NotFoundPageProps) => {
 
     const { t } = useTranslation()
+
+    console.log('hi again');
+    
     
     return (
        
