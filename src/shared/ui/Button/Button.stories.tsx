@@ -5,7 +5,7 @@ import { fn } from '@storybook/test';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/themeProvider';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonSize, ThemeButton } from './Button';
 
 
 
@@ -14,7 +14,7 @@ const meta: Meta<typeof Button> = {
     component: Button,
     parameters: {
   
-        layout: 'centered',
+        // layout: 'centered',
     },
  
     tags: ['autodocs'],
@@ -52,6 +52,21 @@ export const Outlined: Story = {
     },
 };
 
+export const OutlinedSizeL: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.OUTLINE,
+        size: ButtonSize.L
+    },
+};
+
+export const OutlinedSizeXL: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.OUTLINE,
+        size: ButtonSize.XL
+    },
+};
 
 export const OutlinedDark: Story = {
     args: {
@@ -62,4 +77,44 @@ export const OutlinedDark: Story = {
 
 OutlinedDark.decorators = [ThemeDecorator(Theme.DARK)]
 
+export const BackgroundTheme: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.BACKGROUND
+    },
+};
+
+export const InvertedBackgroundTheme: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.BACKGROUND_INVERTED
+    },
+};
+
+export const Square: Story = {
+    args: {
+        children: '>',
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        square: true
+    },
+};
+
+
+export const SquareSizeL: Story = {
+    args: {
+        children: '>',
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.L
+    },
+};
+
+export const SquareSizeXL: Story = {
+    args: {
+        children: '>',
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.XL
+    },
+};
 
