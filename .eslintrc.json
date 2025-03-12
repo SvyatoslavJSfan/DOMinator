@@ -14,7 +14,8 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "i18next"
+    "i18next",
+    "react-hooks"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
@@ -47,6 +48,8 @@
     "react/jsx-props-no-spreading": "warn",
     "no-shadow": "off",
     "eslint-plugin-import/no-extraneous-dependencies": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
     "no-underscore-dangle": "off",
     "i18next/no-literal-string": [
       "error",
@@ -59,7 +62,9 @@
       }
     ],
     "@typescript-eslint/ban-ts-comment": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   "globals": {
     "__IS_DEV__": true
@@ -68,13 +73,14 @@
     {
       "files": [
         "node_modules/**",
-        "**/src/**/*.test.{ts, tsx}"
+        "**/src/**/*.{test,stories}.{ts, tsx}"
       ],
       "excludedFiles": [
         "node_modules/**"
       ],
       "rules": {
-        "i18next/no-literal-string": "off"
+        "i18next/no-literal-string": "off",
+        "max-len": "off"
       }
     }
   ]
