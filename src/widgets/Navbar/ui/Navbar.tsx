@@ -34,7 +34,7 @@ export function Navbar({ className }: NavbarProps) {
                 {t('Войти')}
             </Button>
             <Modal isOpen={isAuthModal} onClose={onToggleModal} >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nobis modi enim quasi soluta placeat praesentium et quis ipsum. Fuga architecto voluptatibus ipsa est asperiores vitae cum consectetur. Illo, maxime!
+                {t('Lorem')}
             </Modal>
         </div>
     );
