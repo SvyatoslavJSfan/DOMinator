@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server 1",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "json-server 2",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "title": "json-server 3",
+      "author": "typicode"
+    },
+    {
+      "username": "Slava",
+      "password": "12345",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "a comment about post 1",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Slava",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
