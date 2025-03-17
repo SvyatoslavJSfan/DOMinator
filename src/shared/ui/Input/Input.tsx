@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { InputHTMLAttributes, memo, useEffect, useRef, useState } from 'react';
 import cls from './Input.module.scss';
