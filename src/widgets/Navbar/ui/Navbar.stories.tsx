@@ -5,6 +5,7 @@ import { fn } from '@storybook/test';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/themeProvider';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Navbar } from './Navbar';
 
 
@@ -34,11 +35,25 @@ export const Light: Story = {
     args: {},
 };
 
+Light.decorators = [StoreDecorator({
+    loginForm: { username: 'username', password: 'password' }
+})]
+
 export const Dark: Story = {
     args: {},
 };
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    loginForm: { username: 'username', password: 'password' }
+})]
+
+export const AuthNavbar: Story = {
+    args: {},
+};
+
+AuthNavbar.decorators = [StoreDecorator({
+    user: { authData: {} }
+})]
 
 
 

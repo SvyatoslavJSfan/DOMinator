@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import webpack, { RuleSetRule }  from 'webpack'
+import webpack, { DefinePlugin, RuleSetRule }  from 'webpack'
 import path from 'path'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 import { BuildPaths } from '../build/types/config'
@@ -29,6 +29,10 @@ export default ({ config }: {config: webpack.Configuration}) => {
         use: ['@svgr/webpack']
     })
     config.module.rules.push(buildCssLoader(true))
+
+    config.plugins.push(new DefinePlugin({
+        __IS_DEV__: true
+    }))
 
     return config
 }

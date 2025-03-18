@@ -21,13 +21,13 @@ server.use(async (req, res, next) => {
 
 
 // eslint-disable-next-line
-server.use((req, res, next) => {
-    if (!req.headers.authorization) {
-        return res.status(403).json({ message: 'AUTH ERROR' });
-    }
+// server.use((req, res, next) => {
+//     if (!req.headers.authorization) {
+//         return res.status(403).json({ message: 'AUTH ERROR' });
+//     }
 
-    next();
-});
+//     next();
+// });
 
 server.use(jsonServer.defaults());
 
