@@ -30,7 +30,7 @@ export function Navbar({ className }: NavbarProps) {
 
     const onLogout = useCallback(() => {
         dispatch(userActions.logout())
-    }, [])
+    }, [dispatch])
 
     if(authData) {
         return (
