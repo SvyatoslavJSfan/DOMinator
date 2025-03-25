@@ -41,6 +41,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Slava",
+    "lastname": "Rumyantsev",
+    "age": 44,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Verkhnyaya Troitsa",
+    "username": "admin",
+    "avatar": "https://avatars.githubusercontent.com/u/95268334?v=4?s=400"
   }
 }

@@ -1,4 +1,5 @@
 import { configureStore, DeepPartial, ReducersMapObject } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
 import { userReducer } from '../../../../../src/entities/User';
 import { counterReducer } from '../../../../../src/entities/Counter';
 import { StateSchema } from './StateSchema';
@@ -28,4 +29,6 @@ export function createReduxStore(initialState: StateSchema, asyncReducers?: Redu
 
     return store
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']
 
