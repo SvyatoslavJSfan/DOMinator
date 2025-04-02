@@ -1,3 +1,15 @@
 {
-    "Profile Page": "Profile Page"
+    "Profile Page": "Profile Page",
+    "Профиль": "User's profile",
+    "Редактировать": "Edit",
+    "Ваше имя": "Your first name",
+    "Ваша фамилия": "Your last name",
+    "Произошла ошибка при загрузке профиля": "An error occured during profile loading",
+    "Попробуйте обновить страницу": "Please try to renew the page.",
+     "Отменить": "Cancel",
+     "Сохранить": "Save",
+     "Ваш возраст": "Your age",
+     "Ваш город": "Your city",
+    "Ваше имя пользователя": "Your username",
+     "Ваша аватарка": "Your avatar"
 }

@@ -22,5 +22,7 @@
   "Форма авторизации": "Authorization form",
   "Неверный логин или пароль": "Wrong username or password",
   "Profile Page": "Profile Page",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Укажите валюту": "Specify currency",
+  "Укажите страну": "Specify country"
 }
