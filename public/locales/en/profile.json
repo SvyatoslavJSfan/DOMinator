@@ -11,5 +11,10 @@
      "Ваш возраст": "Your age",
      "Ваш город": "Your city",
     "Ваше имя пользователя": "Your username",
-     "Ваша аватарка": "Your avatar"
+     "Ваша аватарка": "Your avatar",
+     "Ошибка сервера": "Server error",
+     "Некорректный возраст": "The age must be a positive integer",
+     "Проверьте правильность написания страны": "Check the country",
+     "Имя и фамилия обязательны": "Firs name and last name are obligatory",
+     "Данные не могут быть пустыми": "Data must not be empty"
 }

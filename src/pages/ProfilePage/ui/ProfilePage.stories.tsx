@@ -5,6 +5,8 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/themeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import ProfilePage from './ProfilePage';
+import { Country } from '../../../entities/Country';
+import { Currency } from '../../../entities/Currency';
 
 
 
@@ -27,10 +29,32 @@ export const Normal: Story = {
     args: {},
 };
 
-Normal.decorators = [StoreDecorator({})]
+Normal.decorators = [StoreDecorator({
+    profile: {
+        form: {
+            username: 'admin',
+            first: 'Svyatoslav',
+            lastname: 'Rumyantsev',
+            age: 44,
+            country: Country.Russia,
+            city: 'Verkhnyaya Troitsa',
+            currency: Currency.RUB,
+        }
+    }
+})]
 
 export const Dark: Story = {
     args: {},
 };
 
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: { id: '1', username: 'Slava' } } })]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({ profile: {
+    form: {
+        username: 'admin',
+        first: 'Svyatoslav',
+        lastname: 'Rumyantsev',
+        age: 44,
+        country: Country.Russia,
+        city: 'Verkhnyaya Troitsa',
+        currency: Currency.RUB,
+    }
+} })]

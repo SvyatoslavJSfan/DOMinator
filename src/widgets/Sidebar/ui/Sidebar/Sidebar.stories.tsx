@@ -47,5 +47,13 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     user: { authData: {} }
 })]
 
+export const NoAuth: Story = {
+    args: {},
+};
+
+NoAuth.decorators = [StoreDecorator({
+    user: {  }
+})]
+
 
 
