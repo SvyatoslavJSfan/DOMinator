@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/themeProvider';
 
@@ -78,4 +77,12 @@ export const OnlyTextDark: Story = {
 };
 
 OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const SizeL: Story = {
+    args: {
+        title: 'Title',
+        text: 'Lorem ipsum dolor sit amet',
+        size: TextSize.L
+    },
+};
 

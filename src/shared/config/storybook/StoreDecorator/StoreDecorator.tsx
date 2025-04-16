@@ -5,11 +5,15 @@ import 'app/styles/index.scss';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { Suspense } from 'react';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { articleDetailsReducer } from '../../../../entities/Article/model/slice/ArticleDetailsSlice';
 import { profileReducer } from '../../../../entities/Profile';
+
+
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
-    profile: profileReducer
+    profile: profileReducer,
+    articleDetails: articleDetailsReducer
 }
 
 
