@@ -1,15 +1,14 @@
-
+/* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article, ArticleBlockType, ArticleType } from '../../../../entities/Article/model/types/article';
-import ArticleDetailsPage from './ArticleDetailsPage';
-
+import { Article, ArticleBlockType, ArticleType, ArticleView } from '../../../../entities/Article/model/types/article';
+import { ArticleListItem } from './ArticleListItem';
+import { ArticleList } from './ArticleList';
 
 
-const meta: Meta<typeof ArticleDetailsPage> = {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
+
+const meta: Meta<typeof ArticleList> = {
+    title: 'entities/Article/ArticleList',
+    component: ArticleList,
     parameters: {},
  
     tags: ['autodocs'],
@@ -19,9 +18,9 @@ const meta: Meta<typeof ArticleDetailsPage> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ArticleDetailsPage>;
+type Story = StoryObj<typeof ArticleList>;
 
-const article: Article =     {
+const article: Article = {
     'id': '1',
     'title': 'Javascript news',
     'subtitle': 'Что нового в JS за 2022 год?',
@@ -95,15 +94,46 @@ const article: Article =     {
     ]
 }
 
-export const Normal: Story = {
-    args: {},
+export const LoadingBig: Story = {
+    args: {
+        articles: [],
+        isLoading: true,
+        view: ArticleView.BIG,
+    },
 };
 
-Normal.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            data: article
-        }
-    })
-]
+
+export const LoadingSmall: Story = {
+    args: {
+        articles: [],
+        isLoading: true,
+        view: ArticleView.SMALL,
+    },
+};
+
+export const ListSmall: Story = {
+    args: {
+        articles: new Array(9)
+            .fill(0)
+            .map((item, index) => ({
+                ...article,
+                id: String(index),
+            })),
+        isLoading: false,
+        view: ArticleView.SMALL,
+    },
+};
+
+export const ListBig: Story = {
+    args: {
+        articles: new Array(9)
+            .fill(0)
+            .map((item, index) => ({
+                ...article,
+                id: String(index),
+            })),
+        isLoading: false,
+        view: ArticleView.BIG,
+    },
+};
 

@@ -1,15 +1,13 @@
-
+/* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article, ArticleBlockType, ArticleType } from '../../../../entities/Article/model/types/article';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { Article, ArticleBlockType, ArticleType, ArticleView } from '../../../../entities/Article/model/types/article';
+import { ArticleListItem } from './ArticleListItem';
 
 
 
-const meta: Meta<typeof ArticleDetailsPage> = {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
+const meta: Meta<typeof ArticleListItem> = {
+    title: 'entities/Article/ArticleListItem',
+    component: ArticleListItem,
     parameters: {},
  
     tags: ['autodocs'],
@@ -19,7 +17,7 @@ const meta: Meta<typeof ArticleDetailsPage> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ArticleDetailsPage>;
+type Story = StoryObj<typeof ArticleListItem>;
 
 const article: Article =     {
     'id': '1',
@@ -95,15 +93,18 @@ const article: Article =     {
     ]
 }
 
-export const Normal: Story = {
-    args: {},
+export const Big: Story = {
+    args: {
+        view: ArticleView.BIG,
+        article
+    },
 };
 
-Normal.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            data: article
-        }
-    })
-]
+
+export const Small: Story = {
+    args: {
+        view: ArticleView.SMALL,
+        article
+    },
+};
 
