@@ -1,11 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
-import ArticlesPage from './ArticlesPage';
+import { ArticlesPageFilters } from './ArticlesPageFilters';
 
 
-const meta: Meta<typeof ArticlesPage> = {
-    title: 'pages/Article/ArticlesPage',
-    component: ArticlesPage,
+const meta: Meta<typeof ArticlesPageFilters> = {
+    title: 'pages/Article/ArticlesPageFilters',
+    component: ArticlesPageFilters,
     parameters: {},
  
     tags: ['autodocs'],
@@ -15,7 +15,7 @@ const meta: Meta<typeof ArticlesPage> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ArticlesPage>;
+type Story = StoryObj<typeof ArticlesPageFilters>;
 
 
 export const Normal: Story = {
