@@ -60,7 +60,8 @@
         "markupOnly": true,
         "ignoreAttribute": [
           "data-testid",
-          "to"
+          "to",
+          "target"
         ]
       }
     ],

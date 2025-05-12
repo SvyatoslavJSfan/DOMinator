@@ -6,7 +6,7 @@ import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { Suspense } from 'react';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
-import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
 import { articleDetailsReducer } from '../../../../entities/Article/model/slice/ArticleDetailsSlice';
 import { profileReducer } from '../../../../entities/Profile';
 
@@ -17,7 +17,7 @@ const defaultAsyncReducers: ReducersList = {
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsComments: articleDetailsCommentsReducer
+    articleDetailsPage: articleDetailsPageReducer
 }
 
 
