@@ -12,6 +12,7 @@
   "toggle": "toggle",
   "Короткий язык": "RU",
   "Войти": "Войти",
+  "Выйти": "Выйти",
   "Lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nobis modi enim quasi soluta placeat praesentium et quis ipsum. Fuga architecto voluptatibus ipsa est asperiores vitae cum consectetur. Illo, maxime!",
   "increment": "увеличить",
   "decrement": "уменьшить",
@@ -26,5 +27,7 @@
    "Комментарии отсутствуют": "Комментарии отсутствуют",
    "Введите текст комментария": "Введите текст комментария",
    "Отправить": "Отправить",
-   "Читать далее": "Читать далее"
+   "Читать далее": "Читать далее",
+   "Создать статью": "Создать статью",
+   "Статьи": "Статьи"
 }
