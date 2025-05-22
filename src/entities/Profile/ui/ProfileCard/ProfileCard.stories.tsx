@@ -19,9 +19,9 @@ const meta: Meta<typeof ProfileCard> = {
  
     tags: ['autodocs'],
  
-    // argTypes: {
-    //     backgroundColor: { control: 'color' },
-    // },
+    argTypes: {
+        
+    },
   
     args: {  },
 };

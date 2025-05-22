@@ -1,9 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { fireEvent, render, screen } from '@testing-library/react'
-import { withTranslation } from 'react-i18next'
+import { fireEvent, screen } from '@testing-library/react'
 import { componentRender } from 'shared/lib/tests/componentRender/componentRender'
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation'
-import { Sidebar } from 'widgets/Sidebar'
+import { Sidebar } from './Sidebar'
 
 describe('Sidebar', () => {
     test('data property present', () => {

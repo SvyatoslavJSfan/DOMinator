@@ -8,7 +8,7 @@ import { UserSchema } from 'entities/User';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { UISchema } from 'features/scrollSave';
-import { ArticleDetailsCommentsSchema, ArticleDetailsRecommendationsSchema, ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { CombinedState, Dispatch } from 'redux';
 

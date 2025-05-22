@@ -1,10 +1,8 @@
 /* eslint-disable i18next/no-literal-string */
-/* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text } from 'shared/ui/Text/Text';
+import React from 'react';
+import { Text } from '../Text/Text';
 import { Card } from './Card';
-
-
 
 
 const meta: Meta<typeof Card> = {

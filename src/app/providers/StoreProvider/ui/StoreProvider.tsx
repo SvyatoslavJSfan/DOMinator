@@ -1,12 +1,8 @@
-import React from 'react';
-import { ReactNode } from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Provider } from 'react-redux';
+import React, { ReactNode } from 'react';
 import { ReducersMapObject } from '@reduxjs/toolkit';
-import { useNavigate } from 'react-router-dom';
-import { createReduxStore } from '../config/store';
+import { Provider } from 'react-redux';
 import { StateSchema } from '../config/StateSchema';
+import { createReduxStore } from '../config/store';
 
 
 interface StoreProviderProps {
@@ -23,12 +19,10 @@ export const StoreProvider = (props: StoreProviderProps) => {
         asyncReducers
     } = props
 
-    // const navigate = useNavigate()
 
     const store = createReduxStore(
         initialState as StateSchema, 
         asyncReducers as ReducersMapObject<StateSchema>,
-        // navigate
     )
 
     return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Preview, Decorator } from '@storybook/react'
 import { Theme } from '../../src/app/providers/themeProvider';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
