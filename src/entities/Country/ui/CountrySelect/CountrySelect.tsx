@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
 
+import { ListBox } from 'shared/ui/ListBox/ListBox';
 import cls from './CurrencySelect.module.scss';
 import { Country } from '../../model/types/country';
 
@@ -30,13 +31,15 @@ export const CountrySelect = memo(({ className, value, onChange, readonly }: Cou
     }, [onChange])
 
     return (
-        <Select 
-            className={classNames('', {}, [className])}
-            label={t('Укажите страну')}
-            options={options}
-            value={value}
+        <ListBox
             onChange={onChangeHandler}
+            value={value}
+            defaultValue={t('Укажите страну')}
+            items={options}
             readonly={readonly}
+            label={t('Укажите страну')}
+            direction='top'
         />
-    );
+    )
+
 })
