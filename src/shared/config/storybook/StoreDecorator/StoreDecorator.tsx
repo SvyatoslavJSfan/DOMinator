@@ -7,8 +7,9 @@ import { Suspense } from 'react';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
+import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
 import { articleDetailsReducer } from '../../../../entities/Article/model/slice/ArticleDetailsSlice';
-import { profileReducer } from '../../../../entities/Profile';
+
 
 
 

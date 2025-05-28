@@ -8,7 +8,7 @@ import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader';
 
 
 const meta: Meta<typeof ArticleDetailsPageHeader> = {
-    title: 'pages/ArticleDetailsPageHeader',
+    title: 'pages/ArticleDetails/ArticleDetailsPageHeader',
     component: ArticleDetailsPageHeader,
     parameters: {
   

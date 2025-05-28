@@ -7,7 +7,7 @@ import ArticlesPage from './ArticlesPage';
 
 
 const meta: Meta<typeof ArticlesPage> = {
-    title: 'pages/Article/ArticlesPage',
+    title: 'pages/ArticlesPage/ArticlesPage',
     component: ArticlesPage,
     parameters: {},
  
