@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
-import { Article, ArticleBlockType, ArticleType, ArticleView } from '../../../../entities/Article/model/types/article';
+import { ArticleType, ArticleView, ArticleBlockType } from '../../model/consts/articleConsts';
+import { Article } from '../../../../entities/Article/model/types/article';
 import { ArticleList } from './ArticleList';
 
 

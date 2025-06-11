@@ -1,3 +1,4 @@
+import React from 'react';
 import { EditableProfileCard } from 'features/editableProfileCard';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
@@ -12,11 +13,7 @@ interface ProfilePageProps {
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
     const { id } = useParams<{ id: string }>();
-    const { t } = useTranslation('profile');
 
-    if (!id) {
-        return <Text text={t('Профиль не найден')} />;
-    }
 
     return (
         <Page className={classNames('', {}, [className])}>

@@ -1,8 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Theme } from 'app/providers/themeProvider';
+import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import AboutPage from './AboutPage';
 
 
@@ -26,9 +27,11 @@ export const Normal: Story = {
     args: {},
 };
 
+Normal.decorators = [StoreDecorator({})]
+
 
 export const Dark: Story = {
     args: {},
 };
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]

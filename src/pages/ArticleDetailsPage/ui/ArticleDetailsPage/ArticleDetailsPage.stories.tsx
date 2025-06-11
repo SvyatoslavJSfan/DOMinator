@@ -1,12 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article, ArticleBlockType, ArticleType } from '../../../../entities/Article/model/types/article';
+import React from 'react';
 import ArticleDetailsPage from './ArticleDetailsPage';
+import { Article } from '../../../../entities/Article/model/types/article';
+import { ArticleType } from 'entities/Article/model/consts/articleConsts';
+import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
 
 
 
 const meta: Meta<typeof ArticleDetailsPage> = {
-    title: 'pages/ArticleDetails/ArticleDetailsPage',
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
     component: ArticleDetailsPage,
     parameters: {},
  
@@ -94,14 +97,15 @@ const article: Article =     {
 }
 
 export const Normal: Story = {
-    args: {},
+    args: {
+    },
 };
 
 Normal.decorators = [
     StoreDecorator({
         articleDetails: {
-            data: article
-        }
-    })
-]
+            data: article,
+        },
+    }),
+];
 

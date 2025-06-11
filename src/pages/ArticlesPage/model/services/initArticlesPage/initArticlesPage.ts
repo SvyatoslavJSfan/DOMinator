@@ -20,8 +20,9 @@ export const initArticlesPage = createAsyncThunk<
             if(!inited) {
                 const orderFromURL = searchParams.get('order') as SortOrder
                 const sortFromURL = searchParams.get('sort') as ArticleSortField
-                const typeFromURL = searchParams.get('type') as ArticleType
                 const searchFromURL = searchParams.get('search')
+                const typeFromURL = searchParams.get('type') as ArticleType
+
 
                 if(orderFromURL) {
                     dispatch(articlesPageActions.setOrder(orderFromURL))

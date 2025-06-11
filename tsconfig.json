@@ -13,7 +13,9 @@
         "*": ["./src/*"]
       },
       "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true
+      "types": ["msw","react", "react-dom"],
+      "allowSyntheticDefaultImports": true,
+      "isolatedModules": true
     },
     "ts-node": {
     "compilerOptions": {

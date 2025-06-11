@@ -1,5 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleDetailsComments } from './ArticleDetailsComments';
 
 
@@ -28,5 +30,8 @@ type Story = StoryObj<typeof ArticleDetailsComments>;
 
 export const Primary: Story = {
     args: {
+        id: '1'
     },
 };
+
+Primary.decorators = [StoreDecorator({})]

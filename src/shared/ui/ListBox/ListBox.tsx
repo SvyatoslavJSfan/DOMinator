@@ -48,7 +48,8 @@ export function ListBox(props: ListBoxProps) {
 
     return (
         <HStack gap="4">
-            {label && <span>{`${label}>`}</span>}
+            
+            {label && (<span>{`${label}>`}</span>)}
             <HListBox
                 disabled={readonly}
                 as="div"
@@ -56,7 +57,7 @@ export function ListBox(props: ListBoxProps) {
                 value={value}
                 onChange={onChange}
             >
-                <HListBox.Button disabled={readonly} className={cls.trigger}>
+                <HListBox.Button className={cls.trigger}>
                     <Button disabled={readonly}>
                         {value ?? defaultValue}
                     </Button>

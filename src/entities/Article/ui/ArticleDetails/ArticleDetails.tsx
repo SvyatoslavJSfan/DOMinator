@@ -17,14 +17,15 @@ import { getArticleDetailsData,
     getArticleDetailsIsLoading } from '../../model/selectors/articleDetails';
 import { articleDetailsReducer } from '../../model/slice/ArticleDetailsSlice';
 import cls from './ArticleDetails.module.scss';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
+import { ArticleBlockType } from '../../model/consts/articleConsts';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 interface ArticleDetailsProps {
     className?: string;
-    id: string
+    id?: string
 }
 
 const reducers: ReducersList = {
@@ -64,13 +65,13 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
     if(isLoading) {
         content = (
-            <div>
+            <VStack gap='8' max>
                 <Skeleton className={cls.avatar} width={200} height={200} border="50%"/>
                 <Skeleton className={cls.title} width={300} height={32} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
-            </div>
+            </VStack>
         )
     } else if(error) {
         content = (
@@ -114,7 +115,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <VStack gap='16' className={classNames(cls.ArticleDetails, {}, [className])}>
+            <VStack gap='16'max className={classNames(cls.ArticleDetails, {}, [className])}>
                 {content}
             </VStack>
         </DynamicModuleLoader>

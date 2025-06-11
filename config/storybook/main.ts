@@ -9,11 +9,15 @@ const config: StorybookConfig = {
         '@storybook/addon-essentials',
         '@storybook/addon-onboarding',
         '@chromatic-com/storybook',
-        '@storybook/addon-interactions'
+        '@storybook/addon-interactions',
+        'storybook-addon-mock/register',
+        'msw-storybook-addon'
     ],
     'framework': {
         'name': '@storybook/react-webpack5',
         'options': {}
-    }
+    },
+    'staticDirs': ['public']
 };
 export default config;
+

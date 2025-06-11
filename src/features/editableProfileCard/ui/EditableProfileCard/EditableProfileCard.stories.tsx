@@ -32,9 +32,6 @@ export const Primary: Story = {
     },
 };
 
-Primary.decorators = [
-    StoreDecorator({
-    })
-]
+Primary.decorators = [ StoreDecorator({}) ]
 
 
