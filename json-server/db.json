@@ -1,4 +1,38 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "2"
+    }
+  ],
   "posts": [
     {
       "id": "1",
@@ -593,7 +627,7 @@
       "roles": [
         "ADMIN"
       ],
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13"
     },
     {
       "id": "2",
@@ -602,7 +636,7 @@
       "roles": [
         "USER"
       ],
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13"
     },
     {
       "id": "3",
@@ -611,7 +645,7 @@
       "roles": [
         "MANAGER"
       ],
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13"
     }
   ],
   "profile": [
@@ -635,7 +669,7 @@
       "country": "Russia",
       "city": "Moscow",
       "username": "ulbi tv",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13"
     }
   ]
 }

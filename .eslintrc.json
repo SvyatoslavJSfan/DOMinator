@@ -68,7 +68,8 @@
           "align",
           "gap",
           "role",
-          "as"
+          "as",
+          "border"
         ]
       }
     ],

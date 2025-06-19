@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';
 
 
@@ -28,7 +28,7 @@ const meta: Meta<typeof Dropdown> = {
 export default meta;
 type Story = StoryObj<typeof Dropdown>;
 
-
+// 4:34
 export const Normal: Story = {
     args: {
         trigger: <Button>Open</Button>,
