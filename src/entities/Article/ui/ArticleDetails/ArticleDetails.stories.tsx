@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import React from 'react';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleType, ArticleBlockType } from '../../model/consts/articleConsts';
 import { Article } from '../../../../entities/Article/model/types/article';
 import { ArticleDetails } from './ArticleDetails';

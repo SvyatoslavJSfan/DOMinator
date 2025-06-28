@@ -1,7 +1,7 @@
 import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
-import { $api } from 'shared/api/api';
-import { uiReducer } from 'features/scrollSave';
-import { rtkApi } from 'shared/api/rtkApi';
+import { $api } from '@/shared/api/api';
+import { uiReducer } from '@/features/scrollSave';
+import { rtkApi } from '@/shared/api/rtkApi';
 import { counterReducer } from '../../../../../src/entities/Counter';
 import { userReducer } from '../../../../../src/entities/User';
 import { StateSchema, ThunkExtraArg } from './StateSchema';

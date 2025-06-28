@@ -1,14 +1,14 @@
 import React from 'react';
-import { AboutPage } from 'pages/AboutPage'
-import { MainPage } from 'pages/MainPage'
-import { NotFoundPage } from 'pages/NotFoundPage'
 import { RouteProps } from 'react-router-dom'
-import { ProfilePage } from 'pages/ProfilePage';
-import { ArticlesPage } from 'pages/ArticlesPage';
-import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
-import { ArticleEditPage } from 'pages/ArticleEditPage';
-import { AdminPanelPage } from 'pages/AdminPanelPage';
-import { ForbiddenPage } from 'pages/ForbiddenPage';
+import { AboutPage } from '@/pages/AboutPage'
+import { MainPage } from '@/pages/MainPage'
+import { NotFoundPage } from '@/pages/NotFoundPage'
+import { ProfilePage } from '@/pages/ProfilePage';
+import { ArticlesPage } from '@/pages/ArticlesPage';
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
+import { ArticleEditPage } from '@/pages/ArticleEditPage';
+import { AdminPanelPage } from '@/pages/AdminPanelPage';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { UserRole } from '../../../entities/User';
 
 

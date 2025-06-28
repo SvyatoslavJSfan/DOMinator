@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleSortField, ArticleType, ArticleView } from '../../../../entities/Article';
 import { Article, ArticleBlockType } from '../../../../entities/Article';
 import ArticlesPage from './ArticlesPage';
