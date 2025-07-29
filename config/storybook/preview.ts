@@ -1,5 +1,5 @@
 import type { Preview, Decorator } from '@storybook/react';
-import { initialize, mswDecorator } from 'msw-storybook-addon'
+import { initialize, mswDecorator, mswLoader } from 'msw-storybook-addon'
 import { Theme } from '../../src/app/providers/ThemeProvider';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
@@ -8,7 +8,6 @@ import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDec
 
 initialize()
 
-// 20:49
 
 const preview: Preview = {
     parameters: {
@@ -23,6 +22,7 @@ const preview: Preview = {
             handlers: []
         }
     },
+    loaders: [mswLoader],
 };
 
 

@@ -1,6 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
+import { rest } from 'msw';
 import ArticleRating from './ArticleRating';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 
 const meta: Meta<typeof ArticleRating> = {
@@ -18,6 +20,13 @@ const meta: Meta<typeof ArticleRating> = {
     // },
   
     args: {  },
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: { id: '1' }
+            }
+        })
+    ]
 };
 
 export default meta;
@@ -25,8 +34,42 @@ type Story = StoryObj<typeof ArticleRating>;
 
 
 export const Primary: Story = {
-    args: { },
-};
+    args: { 
+        articleId: '1'
+    },
+    parameters: {
+        msw: {
+            handlers: [
+                // @ts-ignore
+                rest.get(`${__API_URL__}/article-ratings?userId=1&articleId=1`, (req, res, ctx) => res(
+                    ctx.status(200),
+                    ctx.json([
+                        { rate: 3 },
+                    ])
+                )),
+            ],
+        },
+    },
+}
+
+export const WithoutRate: Story = {
+    args: { 
+        articleId: '1'
+    },
+    parameters: {
+        msw: {
+            handlers: [
+                // @ts-ignore
+                rest.get(`${__API_URL__}/article-ratings?userId=1&articleId=1`, (req, res, ctx) => res(
+                    ctx.status(200),
+                    ctx.json([])
+                )),
+            ],
+        },
+    },
+}
+
+
 
 
 

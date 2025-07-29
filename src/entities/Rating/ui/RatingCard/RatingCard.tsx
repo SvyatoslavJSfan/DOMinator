@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import React from 'react';
 import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Card } from '@/shared/ui/Card/Card';
