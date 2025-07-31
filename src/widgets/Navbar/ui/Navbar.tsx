@@ -1,17 +1,17 @@
 /* eslint-disable i18next/no-literal-string */
-import React, { memo, useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { RoutePath } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { HStack } from '@/shared/ui/Stack';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
-import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '../../../../src/entities/User';
+import { getUserAuthData } from '../../../../src/entities/User';
 import cls from './Navbar.module.scss';
 
 
