@@ -79,7 +79,14 @@
     "react-hooks/exhaustive-deps": "error",
     "no-undef": "off",
     "react/no-array-index-key": "off",
-    "path-fixer-tralnotipsus/path-checker": "error"
+    "path-fixer-tralnotipsus/path-checker": ["error", {"alias": "@"}],
+    "path-fixer-tralnotipsus/public-api-imports": [
+      "error", 
+      {
+        "alias": "@",
+        "testFilesPatterns": ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]
+      }
+    ]
   },
   "globals": {
     "__IS_DEV__": true,

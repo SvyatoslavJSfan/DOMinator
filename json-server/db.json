@@ -629,6 +629,17 @@
       "userId": "1",
       "text": "А свет когда дадут?",
       "id": "Qhj2TtD"
+    },
+    {
+      "articleId": "16",
+      "text": "Сколько сейчас времени?",
+      "id": "oQXsqtT"
+    },
+    {
+      "articleId": "12",
+      "userId": "1",
+      "text": "Ммммм...",
+      "id": "qLxLGtv"
     }
   ],
   "users": [
@@ -781,6 +792,13 @@
       "rate": 4,
       "feedback": "Ну, так...",
       "id": "cm441ys"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 2,
+      "feedback": "ммммм....",
+      "id": "n-hGDQN"
     }
   ]
 }

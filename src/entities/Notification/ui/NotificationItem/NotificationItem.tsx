@@ -9,7 +9,7 @@ interface NotificationItemProps {
     className?: string;
     item: Notification
 }
-
+// 04:38
 export const NotificationItem = memo((props: NotificationItemProps) => {
     const { className, item } = props;
 
