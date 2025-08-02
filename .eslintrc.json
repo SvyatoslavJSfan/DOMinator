@@ -16,10 +16,12 @@
     "@typescript-eslint",
     "i18next",
     "react-hooks",
-    "path-fixer-tralnotipsus"
+    "path-fixer-tralnotipsus",
+    "unused-imports"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "unused-imports/no-unused-imports": "error",
     "react/jsx-filename-extension": [
       "warn",
       {
