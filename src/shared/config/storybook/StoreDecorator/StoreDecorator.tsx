@@ -1,8 +1,6 @@
 import React from 'react';
 import { StoryFn } from '@storybook/react';
-import { Suspense } from 'react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import '@/app/styles/index.scss';
 import { loginReducer } from '@/features/AuthByUsername/testing';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { addCommentFormReducer } from '@/features/addCommentForm/testing';
@@ -26,10 +24,7 @@ export const StoreDecorator = (
     asyncReducers?: ReducersList
 ) => (StoryComponent: StoryFn ) => (
     <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}>
-        <Suspense fallback=''>
-            <StoryComponent/>
-        </Suspense>
-        
+        <StoryComponent/>
     </StoreProvider>
 
 )

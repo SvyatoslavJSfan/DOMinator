@@ -1,4 +1,4 @@
-import { LangSwitcher } from '@/shared/ui/LangSwitcher/ui/LangSwitcher/LangSwitcher';
+import { LangSwitcher } from '@/features/LangSwitcher';
 import { Sidebar } from './ui/Sidebar/Sidebar';
 
 export {

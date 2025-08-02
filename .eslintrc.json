@@ -86,6 +86,13 @@
         "alias": "@",
         "testFilesPatterns": ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]
       }
+    ],
+        "path-fixer-tralnotipsus/layer-imports": [
+      "error", 
+      {
+        "alias": "@",
+        "ignoreImportPatterns": ["**/StoreProvider", "**/testing"]
+      }
     ]
   },
   "globals": {

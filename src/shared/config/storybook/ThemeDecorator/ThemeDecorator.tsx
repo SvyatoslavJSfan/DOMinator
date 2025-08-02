@@ -1,7 +1,10 @@
 import React from 'react';
-import '@/app/styles/index.scss'
 import { StoryFn } from '@storybook/react'
-import { Theme, ThemeProvider } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/shared/const/theme';
+// eslint-disable-next-line path-fixer-tralnotipsus/layer-imports
+import { ThemeProvider } from '@/app/providers/ThemeProvider';
+
+
 
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn ) => (
