@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import { memo, useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { LoginModal } from '@/features/AuthByUsername';

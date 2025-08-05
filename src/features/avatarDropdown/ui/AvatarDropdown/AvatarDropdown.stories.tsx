@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
 import { AvatarDropdown } from './AvatarDropdown';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 
 
@@ -19,6 +20,8 @@ const meta: Meta<typeof AvatarDropdown> = {
     // },
   
     args: {  },
+
+    decorators: [StoreDecorator({})]
 }
 
 export default meta;

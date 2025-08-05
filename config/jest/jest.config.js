@@ -3,12 +3,13 @@
  * https://jestjs.io/docs/configuration
  */
 
-import path from 'path';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path')
 
 // import type {Config} from 'jest';
 
 // const config: Config = {
-export default {
+module.exports = {
     globals: {
         __IS_DEV__: true,
         __API_URL__: '',
@@ -20,9 +21,9 @@ export default {
         '\\\\node_modules\\\\'
     ],
     moduleDirectories: [
-        'node_modules'
+        'node_modules',
     ],
-    'modulePaths': [
+    modulePaths: [
         '<rootDir>src'
     ],
     moduleFileExtensions: [
@@ -44,7 +45,8 @@ export default {
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
     reporters: [
         'default',
