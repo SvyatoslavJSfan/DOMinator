@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
-import { RoutePath } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { Button, ThemeButton } from '@/shared/ui/Button';
@@ -13,6 +12,7 @@ import { HStack } from '@/shared/ui/Stack';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { getUserAuthData } from '../../../../src/entities/User';
 import cls from './Navbar.module.scss';
+import { getRouteArticleCreate } from '@/shared/const/router';
 
 
 interface NavbarProps {
@@ -44,7 +44,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     theme={TextTheme.INVERTED}
                 />
                 <AppLink 
-                    to={RoutePath.article_create}
+                    to={getRouteArticleCreate()}
                     theme={AppLinkTheme.SECONDARY}
                     className={cls.createBtn}
                 >
