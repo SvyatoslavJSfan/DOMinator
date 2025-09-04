@@ -20,6 +20,8 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         articleId,
         userId: userData?.id ?? '',
     });
+    console.log(data, isLoading);
+    
     const [rateArticleMutation] = useRateArticle();
 
     const handleRateArticle = useCallback((starsCount: number, feedback?: string) => {

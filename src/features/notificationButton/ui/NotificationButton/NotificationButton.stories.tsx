@@ -1,4 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
+// eslint-disable-next-line unused-imports/no-unused-imports
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react';
 import { NotificationButton } from './NotificationButton';
 

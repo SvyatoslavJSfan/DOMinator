@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
-import React from 'react';
 import { Text } from '@/shared/ui/Text';
 import { ArticleList } from '../../../../entities/Article';
 import { getArticles } from '../../model/slices/articlesPageSlice';

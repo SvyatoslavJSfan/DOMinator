@@ -1,10 +1,10 @@
 import React from 'react';
 import { StoryFn } from '@storybook/react'
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 
 export const RouterDecorator = (StoryComponent: StoryFn ) => (
-    <BrowserRouter>
+    <MemoryRouter>
         <StoryComponent />
-    </BrowserRouter>
+    </MemoryRouter>
 )

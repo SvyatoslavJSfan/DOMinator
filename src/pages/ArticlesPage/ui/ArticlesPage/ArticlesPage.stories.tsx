@@ -1,4 +1,8 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable unused-imports/no-unused-imports */
 /* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
+import { rest } from 'msw';
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleSortField, ArticleType, ArticleView } from '../../../../entities/Article';
@@ -9,7 +13,17 @@ import ArticlesPage from './ArticlesPage';
 const meta: Meta<typeof ArticlesPage> = {
     title: 'pages/ArticlesPage/ArticlesPage',
     component: ArticlesPage,
-    parameters: {},
+    parameters: {
+        msw: {
+            handlers: [
+                rest.get('https://testapi.ru/articles', (req, res, ctx) => res(
+                    ctx.status(200),
+                    ctx.set('x-total-count', String(articles.length)),
+                    ctx.json(articles),
+                )),
+            ],
+        },
+    },
  
     tags: ['autodocs'],
  

@@ -1,4 +1,4 @@
-import {
+import React, {
     ImgHTMLAttributes, memo, ReactElement, useLayoutEffect, useState,
 } from 'react';
 
