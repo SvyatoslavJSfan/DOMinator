@@ -44,13 +44,13 @@ jobs:
         run: npm run storybook:build
         if: always()
 
-      # - name: Screenshot testing
-      #   run: npm run test:ui:ci
-      #   if: always()
+      - name: Screenshot testing
+        run: npm run test:ui:ci
+        if: always()
 
-      # - name: Generate HTML report
-      #   run: npm run test:ui:report
-      #   if: always()
+      - name: Generate HTML report
+        run: npm run test:ui:report
+        if: always()
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
