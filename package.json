@@ -25,7 +25,8 @@
     "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "prepare": "husky install",
     "generate:slice": "node ./scripts/createSlice/index.js",
-    "postinstall": "node ./scripts/clear-cache.js"
+    "postinstall:local": "node ./scripts/clear-cache.js",
+    "postinstall": "if [ -z \"$CI\" ]; then npm run postinstall:local; fi"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": "eslint"
