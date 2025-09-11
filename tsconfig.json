@@ -1,30 +1,38 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist/",
-      "noImplicitAny": true,
-      "module": "ESNext",
-      "target": "es5",
-      "jsx": "react-jsx",
-      "allowJs": true,
-      "strict": true,
-      "moduleResolution": "node",
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["./src/*"]
-      },
-      "esModuleInterop": true,
-      "types": ["msw","react", "react-dom"],
-      "allowSyntheticDefaultImports": true,
-      "isolatedModules": true
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
     },
-    "ts-node": {
+    "esModuleInterop": true,
+    "types": ["msw", "react", "react-dom"],
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2019", "DOM"]
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./config/jest/setupTests.ts"
+  ],
+  "exclude": [
+    "cypress",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ],
+  "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
-    },
-    "include": [
-    "./config/jest/setupTests.ts",
-    "./src/**/*.ts",
-    "./src/**/*.tsx"
-  ],
-  },
+    }
   }
+}

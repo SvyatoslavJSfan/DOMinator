@@ -23,23 +23,24 @@ export const DynamicModuleLoader = (props: DynamicModuleLoaderProps) => {
     useEffect(() => {
         const mountedReducers = store.reducerManager.getMountedReducers()
 
-        Object.entries(reducers).forEach(([name, reducer]) => {
-            const mounted = mountedReducers[name as StateSchemaKey]
-            if(!mounted) {
-                store.reducerManager.add(name as StateSchemaKey, reducer)
+        ;(Object.keys(reducers) as StateSchemaKey[]).forEach((name: StateSchemaKey) => {
+            const reducer = reducers[name]
+            const mounted = mountedReducers[name]
+            if (!mounted) {
+                if (reducer) {
+                    store.reducerManager.add(name, reducer)
+                }
                 dispath({ type: `@INIT ${name} reducer` })
             }
-
         })
 
         return () => {
             if (removeAfterUnmount) {
-                Object.entries(reducers).forEach(([name, reducer]) => {
-                    store.reducerManager.remove(name as StateSchemaKey)
+                ;(Object.keys(reducers) as StateSchemaKey[]).forEach((name: StateSchemaKey) => {
+                    store.reducerManager.remove(name)
                     dispath({ type: `@DESTROY ${name} reducer` })
                 })
             }
-
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])

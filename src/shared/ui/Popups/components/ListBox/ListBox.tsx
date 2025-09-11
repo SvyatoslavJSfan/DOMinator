@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import { Listbox as HListBox } from '@headlessui/react';
 import React, { Fragment, ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -66,7 +67,7 @@ export function ListBox(props: ListBoxProps) {
                             disabled={item.disabled}
                             as={Fragment}
                         >
-                            {({ active, selected }) => (
+                            {({ active, selected }: { active: boolean; selected: boolean }) => (
                                 <li
                                     className={classNames(
                                         cls.item,

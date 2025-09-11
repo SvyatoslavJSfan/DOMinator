@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import React, { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
@@ -42,7 +43,10 @@ export const ArticleListItem = memo(({ className, article, view, target }: Artic
         const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlock
 
         return (
-            <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+            <div 
+                data-testId="ArticleListItem"
+                className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            >
                 <Card className={cls.card}>
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user.avatar}/>
@@ -78,6 +82,7 @@ export const ArticleListItem = memo(({ className, article, view, target }: Artic
 
     return (
         <AppLink 
+            data-testId="ArticleListItem"
             target={target}
             to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
