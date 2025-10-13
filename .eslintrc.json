@@ -115,6 +115,18 @@
         "i18next/no-literal-string": "off",
         "max-len": "off"
       }
+    },
+    {
+      "files": [
+        "cypress/**/*.*"
+      ],
+      "rules": {
+        "path-fixer-tralnotipsus/path-checker": "off",
+        "path-fixer-tralnotipsus/public-api-imports": "off",
+        "path-fixer-tralnotipsus/layer-imports": "off",
+        "i18next/no-literal-string": "off",
+        "@typescript-eslint/no-namespace": "off"
+      }
     }
   ]
 }

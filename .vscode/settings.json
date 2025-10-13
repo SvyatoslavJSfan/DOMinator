@@ -6,5 +6,7 @@
    "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
-    "i18n-ally.keystyle": "nested"
+    "i18n-ally.keystyle": "nested",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "notebook.defaultFormatter": "esbenp.prettier-vscode"
 }
