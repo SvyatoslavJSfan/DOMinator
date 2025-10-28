@@ -71,7 +71,8 @@
           "gap",
           "role",
           "as",
-          "border"
+          "border",
+          "feature"
         ]
       }
     ],

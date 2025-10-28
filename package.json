@@ -27,7 +27,8 @@
     "prepare": "husky install",
     "generate:slice": "node ./scripts/createSlice/index.js",
     "postinstall:local": "node ./scripts/clear-cache.js",
-    "postinstall": "if [ -z \"$CI\" ]; then npm run postinstall:local; fi"
+    "postinstall": "if [ -z \"$CI\" ]; then npm run postinstall:local; fi",
+    "remove-feature": "ts-node ./scripts/remove-feature.ts"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": "eslint"
@@ -60,7 +61,7 @@
     "@testing-library/user-event": "^14.3.0",
     "@types/circular-dependency-plugin": "^5.0.5",
     "@types/jest": "^27.4.1",
-    "@types/node": "^17.0.21",
+    "@types/node": "^17.0.45",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",

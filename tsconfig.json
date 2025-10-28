@@ -14,7 +14,7 @@
       "@/*": ["./src/*"]
     },
     "esModuleInterop": true,
-    "types": ["msw", "react", "react-dom"],
+    "types": ["msw", "react", "react-dom", "node"],
     "allowSyntheticDefaultImports": true,
     "lib": ["ES2019", "DOM"]
   },
