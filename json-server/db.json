@@ -674,11 +674,12 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       }
     },
@@ -695,7 +696,8 @@
       },
       "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
       "jsonSettings": {
-        "isArticlesPageWasOpened": true
+        "isArticlesPageWasOpened": true,
+        "theme": "app_light_theme"
       }
     },
     {

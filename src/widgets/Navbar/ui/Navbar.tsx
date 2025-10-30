@@ -6,13 +6,14 @@ import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
-import { Button, ThemeButton } from '@/shared/ui/Button';
-import { HStack } from '@/shared/ui/Stack';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { HStack } from '@/shared/ui/redesigned/Stack';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 import { getUserAuthData } from '../../../../src/entities/User';
 import cls from './Navbar.module.scss';
 import { getRouteArticleCreate } from '@/shared/const/router';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 
 interface NavbarProps {
@@ -37,26 +38,45 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     if(authData) {
         return (
-            <header className={classNames(cls.Navbar, {}, [className])}>
-                <Text 
-                    className={cls.appName} 
-                    title={t('DOMinator')}
-                    theme={TextTheme.INVERTED}
-                />
-                <AppLink 
-                    to={getRouteArticleCreate()}
-                    theme={AppLinkTheme.SECONDARY}
-                    className={cls.createBtn}
-                >
-                    {t('Создать статью')}
-                </AppLink>
+            <ToggleFeatures
+                feature='isAppRedesigned'
+                on={
+                    <header
+                        className={classNames(cls.NavbarRedesigned, {}, [
+                            className,
+                        ])}
+                    >
+                        <HStack gap="16" className={cls.actions}>
+                            <NotificationButton />
+                            <AvatarDropdown />
+                        </HStack>
+                    </header>
+                }
+
+                off={
+                    <header className={classNames(cls.Navbar, {}, [className])}>
+                        <Text 
+                            className={cls.appName} 
+                            title={t('DOMinator')}
+                            theme={TextTheme.INVERTED}
+                        />
+                        <AppLink 
+                            to={getRouteArticleCreate()}
+                            theme={AppLinkTheme.SECONDARY}
+                            className={cls.createBtn}
+                        >
+                            {t('Создать статью')}
+                        </AppLink>
                 
-                <HStack gap='16'className={cls.actions}>
-                    <NotificationButton/>
-                    <AvatarDropdown/>
-                </HStack>
-                
-            </header> 
+                        <HStack gap='16'className={cls.actions}>
+                            <NotificationButton/>
+                            <AvatarDropdown/>
+                        </HStack>
+                    </header> 
+                }
+            
+            />
+
         )
 
     }
