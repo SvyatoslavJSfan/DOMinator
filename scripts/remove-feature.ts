@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import { JsxAttribute, Node, Project, SyntaxKind } from 'ts-morph';
 
 const removedFeatureName = process.argv[2]; // example isArticleEnabled
@@ -134,7 +135,7 @@ files.forEach((sourceFile) => {
             node.isKind(SyntaxKind.JsxSelfClosingElement) &&
                     isToggleComponent(node)
         ) {
-            replaceComponent(node);
+            return replaceComponent(node);
         }
     });
 });
