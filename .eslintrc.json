@@ -75,7 +75,8 @@
           "feature",
           "color",
           "variant",
-          "size"
+          "size",
+          "wrap"
         ]
       }
     ],

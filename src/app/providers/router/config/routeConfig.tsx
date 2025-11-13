@@ -1,6 +1,7 @@
 import React from 'react';
 import { AboutPage } from '@/pages/AboutPage'
 import { MainPage } from '@/pages/MainPage'
+import { SettingsPage } from '@/pages/SettingsPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 import { ProfilePage } from '@/pages/ProfilePage';
 import { ArticlesPage } from '@/pages/ArticlesPage';
@@ -9,7 +10,18 @@ import { ArticleEditPage } from '@/pages/ArticleEditPage';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { UserRole } from '@/entities/User';
-import { AppRoutes, getRouteAbout, getRouteAdmin, getRouteArticleCreate, getRouteArticleDetails, getRouteArticleEdit, getRouteArticles, getRouteForbidden, getRouteMain, getRouteProfile } from '@/shared/const/router';
+import { AppRoutes, 
+    getRouteAbout, 
+    getRouteAdmin, 
+    getRouteArticleCreate, 
+    getRouteArticleDetails, 
+    getRouteArticleEdit, 
+    getRouteArticles, 
+    getRouteForbidden, 
+    getRouteMain, 
+    getRouteProfile,
+    getRouteSettings,
+} from '@/shared/const/router';
 import { AppRoutesProps } from '@/shared/types/router';
 
 
@@ -17,6 +29,10 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
         path: getRouteMain(),
         element: <MainPage />
+    },
+    [AppRoutes.SETTINGS]: {
+        path: getRouteSettings(),
+        element: <SettingsPage />,
     },
     [AppRoutes.ABOUT]: {
         path: getRouteAbout(),
