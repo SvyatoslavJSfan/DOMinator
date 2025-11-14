@@ -9,6 +9,8 @@
   "increment": "increment",
   "throw error": "throw error",
   "toggle": "toggle",
+  "{{count}} просмотров": "",
+  "{{count}} просмотров_plural": "",
   "Админ панель": "Админ панель",
   "Админка": "Админка",
   "Айти": "Айти",
