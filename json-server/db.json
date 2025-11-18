@@ -662,6 +662,12 @@
       "userId": "1",
       "text": "За ВДВ!",
       "id": "0btmaK4"
+    },
+    {
+      "articleId": "15",
+      "userId": "1",
+      "text": "У хламидомонады хлорофилл в хроматофоре.",
+      "id": "SgkdYMV"
     }
   ],
   "users": [
@@ -679,7 +685,7 @@
       },
       "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       }
     },
