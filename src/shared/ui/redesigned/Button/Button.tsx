@@ -3,6 +3,7 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export type ButtonVariant = 'clear' | 'outline' | 'filled'
+export type ButtonColor = 'normal' | 'success' | 'error';
     
 export type ButtonSize = 'm' | 'l' | 'xl'
 
@@ -15,6 +16,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     disabled?: boolean,
     children?: ReactNode,
     fullWidth?: boolean,
+    color?: ButtonColor;
     addonLeft?: ReactNode;
     addonRight?: ReactNode;
 }
@@ -32,6 +34,7 @@ export const Button = memo((props: ButtonProps) => {
         size = 'm',
         addonLeft,
         addonRight,
+        color = 'normal',
         ...otherProps
     } = props
 
@@ -45,7 +48,7 @@ export const Button = memo((props: ButtonProps) => {
     return (
         <button 
             type='button'
-            className={classNames(cls.Button, mods, [className, cls[variant], cls[size]])}
+            className={classNames(cls.Button, mods, [className, cls[variant], cls[size], cls[color],])}
             disabled={disabled}
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
