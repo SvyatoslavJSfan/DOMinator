@@ -685,7 +685,7 @@
       },
       "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       }
     },
@@ -698,7 +698,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isCounterEnabled": false
+        "isCounterEnabled": false,
+        "isAppRedesigned": false
       },
       "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
       "jsonSettings": {
@@ -862,6 +863,13 @@
       "rate": 4,
       "feedback": "feedback",
       "id": "jgGzNqO"
+    },
+    {
+      "userId": "2",
+      "articleId": "5",
+      "rate": 4,
+      "feedback": "Ещё есть над чем  поработать.",
+      "id": "_ofSC4Q"
     }
   ]
 }
