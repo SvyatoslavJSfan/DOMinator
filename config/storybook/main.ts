@@ -5,7 +5,20 @@ const config: StorybookConfig = {
         '../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'
     ],
     'addons': [
-        '@storybook/addon-webpack5-compiler-swc',
+        {
+            name: '@storybook/addon-webpack5-compiler-swc',
+            options: {
+                swcLoaderOptions: {
+                    jsc: {
+                        transform: {
+                            react: {
+                                runtime: 'classic',
+                            },
+                        },
+                    },
+                },
+            },
+        },
         {
             name: '@storybook/addon-essentials',
             options: {

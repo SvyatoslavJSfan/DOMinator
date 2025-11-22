@@ -5,6 +5,9 @@ import avatar from '@/shared/assets/tests/storybook.jpg'
 import { ProfileCard } from './ProfileCard';
 import { Country } from '../../../../entities/Country';
 import { Currency } from '../../../../entities/Currency';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator/NewDesignDecorator';
 
 
 
@@ -28,26 +31,35 @@ const meta: Meta<typeof ProfileCard> = {
 export default meta;
 type Story = StoryObj<typeof ProfileCard>;
 
+const normalArgs = {
+    data: {
+        username: 'admin',
+        first: 'Svyatoslav',
+        lastname: 'Rumyantsev',
+        age: 44,
+        country: Country.Russia,
+        city: 'Verkhnyaya Troitsa',
+        currency: Currency.RUB,
+        avatar
+    }
+}
 
 export const Primary: Story = {
-    args: {
-        data: {
-            username: 'admin',
-            first: 'Svyatoslav',
-            lastname: 'Rumyantsev',
-            age: 44,
-            country: Country.Russia,
-            city: 'Verkhnyaya Troitsa',
-            currency: Currency.RUB,
-            avatar
-        }
-    },
+    args: normalArgs
 };
 
 Primary.decorators = [StoreDecorator({
     loginForm: { username: 'username', password: 'password' }
 })]
 
+export const PrimaryRedesigned: Story = {
+    args: normalArgs
+};
+
+PrimaryRedesigned.decorators = [
+    NewDesignDecorator,
+    ThemeDecorator(Theme.DARK)
+]
 
 export const WithError: Story = {
     args: {

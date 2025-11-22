@@ -1,4 +1,5 @@
-import { ReactElement } from 'react';
+/* eslint-disable unused-imports/no-unused-imports */
+import React, { ReactElement } from 'react';
 import { FeatureFlags } from '@/shared/types/featureFlags';
 import { getFeatureFlag } from '../../lib/setGetFeatures';
 

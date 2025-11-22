@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable no-param-reassign */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import webpack, { DefinePlugin, RuleSetRule }  from 'webpack'
+import webpack, { DefinePlugin, ProvidePlugin, RuleSetRule }  from 'webpack'
 import path from 'path'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 import { BuildPaths } from '../build/types/config'
@@ -44,6 +44,10 @@ export default ({ config }: {config: webpack.Configuration}) => {
         __IS_DEV__: JSON.stringify(true),
         __API_URL__: JSON.stringify('https://testapi.ru'),
         __PROJECT__: JSON.stringify('storybook'),
+    }))
+
+    config!.plugins!.push(new ProvidePlugin({
+        React: 'react',
     }))
 
     return config
