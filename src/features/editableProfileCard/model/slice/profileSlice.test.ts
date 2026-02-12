@@ -8,8 +8,8 @@ import { profileActions, profileReducer } from './profileSlice';
 const data = {
     username: 'admin',
     age: 22,
-    country: Country.Ukraine,
-    lastname: 'ulbi tv',
+    country: Country.Russia,
+    lastname: 'Rumyantsev',
     first: 'asd',
     city: 'asf',
     currency: Currency.USD,

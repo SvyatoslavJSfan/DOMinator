@@ -48,9 +48,9 @@
   "articles": [
     {
       "id": "1",
-      "title": "Javascript news свежак",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "title": "Обновленный заголовок",
+      "subtitle": "Обновленный подзаголовок",
+      "img": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/7a4d59b5-25b4-4b3b-bdff-bea5f58bd6e1/1920x",
       "views": 584,
       "createdAt": "26.02.2025",
       "userId": "1",
@@ -61,62 +61,76 @@
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Обновленный заголовок блока",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+            "Обновленное содержимое блока."
           ]
         },
         {
           "id": "4",
           "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Обновленное содержимое блока.\";\n    </script>\n  </body>\n</html>;"
         },
         {
           "id": "5",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Обновленный заголовок блока 2.",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+            "Обновленное содержимое блока 2."
           ]
         },
         {
           "id": "2",
           "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
+          "src": "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6914c79aa43d9f7b72274a9d_6914c7be4fdaa54bfd845f3b/scale_1200",
+          "title": "Обновленная полпись к рисунку"
         },
         {
           "id": "3",
           "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
+          "code": "Новый код"
         },
         {
           "id": "7",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Обнов заголовок 3",
           "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+            "Содержимое блока 3"
           ]
         },
         {
           "id": "8",
           "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
+          "src": "https://n1s1.hsmedia.ru/66/98/49/6698498fa9c182014e7c6e0b82c05e3a/560x700_1_148e2af1baa580a2292d224d5acc4a7c@1080x1350_0xf9URhP3c_1667453309903280088.jpg.webp",
+          "title": "обнов подпись к рис 2"
         },
         {
           "id": "9",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Обновленный заголовок 4",
           "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
+            "Содержимое блока 4"
           ]
         }
-      ]
+      ],
+      "user": {
+        "id": "1",
+        "username": "admin",
+        "password": "123",
+        "roles": [
+          "ADMIN"
+        ],
+        "features": {
+          "isArticleRatingEnabled": true,
+          "isCounterEnabled": true,
+          "isAppRedesigned": true
+        },
+        "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
+        "jsonSettings": {
+          "theme": "app_light_theme",
+          "isArticlesPageWasOpened": true
+        }
+      }
     },
     {
       "id": "2",
@@ -149,7 +163,7 @@
       "img": "https://user-images.githubusercontent.com/63420603/154792502-5d96b5cd-79b6-4edb-b855-fdf674aa00ed.png",
       "views": 58,
       "createdAt": "09.07.2024",
-      "userId": "1",
+      "userId": "2",
       "type": [
         "IT"
       ],
@@ -183,12 +197,28 @@
           "type": "TEXT",
           "title": "Заголовок этого блока",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+            "Новое содержимое статьи. Обновлено 19.01.2026 20:25."
           ]
         }
-      ]
+      ],
+      "user": {
+        "id": "1",
+        "username": "admin",
+        "password": "123",
+        "roles": [
+          "ADMIN"
+        ],
+        "features": {
+          "isArticleRatingEnabled": true,
+          "isCounterEnabled": true,
+          "isAppRedesigned": true
+        },
+        "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
+        "jsonSettings": {
+          "theme": "app_light_theme",
+          "isArticlesPageWasOpened": true
+        }
+      }
     },
     {
       "id": "5",
@@ -501,6 +531,124 @@
           ]
         }
       ]
+    },
+    {
+      "title": "",
+      "subtitle": "",
+      "img": "",
+      "views": 0,
+      "createdAt": "14.01.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "5k3bTG0"
+    },
+    {
+      "title": "My first article",
+      "subtitle": "my article",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 0,
+      "createdAt": "14.01.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "CODE",
+          "code": "{ addImageFormIsAvailable ? \n                <AddImageForm \n                    onAdd={onAddImageBlock}\n                    onChange={onChangeImageBlock}\n                    value={currentImageBlockContent}\n                /> \n                : null}"
+        }
+      ],
+      "id": "VxLhSHA"
+    },
+    {
+      "title": "My second article",
+      "subtitle": "This is my second article",
+      "img": "https://avatars.mds.yandex.net/i?id=f511aaed8cfc5cc5839abd28be5a8dfc_l-5410808-images-thumbs&n=13",
+      "views": 0,
+      "createdAt": "14.01.2026",
+      "userId": "1",
+      "type": [
+        "ALL"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "paragraphs": [
+            "This is my firs article about Next.js"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "export const createArticle = createAsyncThunk<Article, void,ThunkConfig<string>>(\n    'createArticle/createArticle',\n    async (_, thunkApi) => {\n\n        const { extra, dispatch, rejectWithValue, getState } = thunkApi\n\n        const userData = getUserAuthData(getState())\n        const title = getCreateArticlePageTitle(getState())\n        console.log(title);\n        if(!userData) {\n            rejectWithValue('no data')\n        }"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "src": "https://cdn.prod.website-files.com/61eff6b3236cf9057b6c1fac/6617e7893e0da766793784bc_Untitled%20(5).png"
+        }
+      ],
+      "id": "sW7ijLW"
+    },
+    {
+      "title": "My third article",
+      "subtitle": "My third article",
+      "img": "",
+      "views": 0,
+      "createdAt": "16.01.2026",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Paragraph title",
+          "paragraphs": [
+            "Tra-ta-ta"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "console.log('Hello world!'"
+        }
+      ],
+      "id": "UHb5cqJ"
+    },
+    {
+      "title": "Гормоны Гермионы",
+      "subtitle": "",
+      "img": "https://cdn.7days.ru/pic/394/2AEDE5E6695002ACC325854B00311166/525295/104.jpg",
+      "views": 0,
+      "createdAt": "20.01.2026",
+      "userId": "1",
+      "type": [
+        "ECONOMICS"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet concectetur!"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "title": "Карина",
+          "src": "https://www.teatral-online.ru/i/ph/xl/xl_20241228100822.jpg"
+        }
+      ],
+      "id": "78VS7A1"
     }
   ],
   "comments": [
@@ -668,6 +816,18 @@
       "userId": "1",
       "text": "У хламидомонады хлорофилл в хроматофоре.",
       "id": "SgkdYMV"
+    },
+    {
+      "articleId": "VxLhSHA",
+      "userId": "1",
+      "text": "Как-то слишком лаконично.",
+      "id": "IwYInF2"
+    },
+    {
+      "articleId": "78VS7A1",
+      "userId": "1",
+      "text": "Класс!",
+      "id": "3bvuiuo"
     }
   ],
   "users": [
@@ -681,11 +841,11 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true,
-        "isAppRedesigned": true
+        "isAppRedesigned": false
       },
       "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_light_theme",
         "isArticlesPageWasOpened": true
       }
     },
@@ -742,7 +902,7 @@
       "id": "1",
       "first": "Slava",
       "lastname": "Rumyantsev",
-      "age": 45,
+      "age": 44,
       "currency": "RUB",
       "country": "Russia",
       "city": "Moscow",
@@ -870,6 +1030,13 @@
       "rate": 4,
       "feedback": "Ещё есть над чем  поработать.",
       "id": "_ofSC4Q"
+    },
+    {
+      "userId": "1",
+      "articleId": "78VS7A1",
+      "rate": 5,
+      "feedback": "",
+      "id": "DnvsLfV"
     }
   ]
 }

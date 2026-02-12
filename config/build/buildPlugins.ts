@@ -46,7 +46,18 @@ export function buildPlugins({ paths, isDev, apiURL, project }: BuildOptions): w
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin())
         plugins.push(new webpack.HotModuleReplacementPlugin())
-        plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }))
+
+        /**
+         * Bundle analyzer is opt-in for local debugging to avoid runtime errors
+         * when dev-server keeps assets in memory (no files on disk).
+         * Enable with ANALYZE=true yarn start.
+         */
+        if (process.env.ANALYZE === 'true') {
+            plugins.push(new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+                analyzerMode: 'server',
+            }))
+        }
     }
 
     if(isProd) {

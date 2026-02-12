@@ -6,6 +6,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleImageBlock } from '../../model/types/article';
 import cls from './ArticleImageBlockComponent.module.scss';
 import { ToggleFeatures } from '@/shared/lib/features';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 
 interface ArticleImageBlockComponentProps {
     className?: string;
@@ -18,7 +19,7 @@ export const ArticleImageBlockComponent = memo(({ className, block }: ArticleIma
 
     return (
         <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])}>
-            <img 
+            <AppImage 
                 src={block.src}
                 className={cls.img}
                 alt={block.title}

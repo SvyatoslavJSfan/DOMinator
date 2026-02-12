@@ -14,6 +14,8 @@ const AppRouter = () => {
                 {route.element}
             </Suspense>
         )
+        
+
         return (
             <Route
                 key={route.path}
@@ -22,6 +24,7 @@ const AppRouter = () => {
             />
         )
     }, [])
+    
 
     return (
         <Routes>

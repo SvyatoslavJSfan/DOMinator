@@ -6,7 +6,6 @@ import { NotFoundPage } from '@/pages/NotFoundPage'
 import { ProfilePage } from '@/pages/ProfilePage';
 import { ArticlesPage } from '@/pages/ArticlesPage';
 import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
-import { ArticleEditPage } from '@/pages/ArticleEditPage';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { UserRole } from '@/entities/User';
@@ -23,6 +22,8 @@ import { AppRoutes,
     getRouteSettings,
 } from '@/shared/const/router';
 import { AppRoutesProps } from '@/shared/types/router';
+import { CreateArticlePage } from '@/pages/CreateArticlePage';
+import { UpdateArticlePage } from '@/pages/UpdateArticlePage';
 
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
@@ -55,12 +56,12 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     },
     [AppRoutes.ARTICLE_CREATE]: {
         path: getRouteArticleCreate(),
-        element: <ArticleEditPage/>,
+        element: <CreateArticlePage/>,
         authOnly: true
     },
     [AppRoutes.ARTICLE_EDIT]: {
         path: getRouteArticleEdit(':id'),
-        element: <ArticleEditPage/>,
+        element: <UpdateArticlePage/>,
         authOnly: true
     },
     [AppRoutes.ADMIN_PANEL]: {

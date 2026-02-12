@@ -1,0 +1,26 @@
+{
+  "ALL": "ALL",
+  "ECONOMICS": "Economics",
+  "IT": "IT",
+  "SCIENCE": "Science",
+  "Введите URL изображения": "Enter image URL",
+  "Введите название абзаца": "Enter paragraph title",
+  "Введите название статьи": "Enter article title",
+  "Введите подзаголовок статьи": "Enter article subtitle",
+  "Введите текст статьи": "Enter paragraph content",
+  "Введите фрагмент кода": "Enter code",
+  "Вставить": "Insert",
+  "Выберите тематику": "Select topic",
+  "Добавить": "Add",
+  "Добавить изображение": "Add image",
+  "Добавить текст": "Add text",
+  "Добавить фрагмент кода": "Add code",
+  "Изображение (укажите URL)": "Image (specify URL)",
+  "Обязательное поле": "",
+  "Отмена": "",
+  "Подпись к рисунку": "Image caption",
+  "Сохранить": "Save",
+  "У статьи должно быть содержимое": "",
+  "Форма создания статьи": "Article creation form"
+}
+  

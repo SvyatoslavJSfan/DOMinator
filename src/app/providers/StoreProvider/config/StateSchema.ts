@@ -12,6 +12,9 @@ import { UISchema } from '@/features/scrollSave';
 import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { rtkApi } from '@/shared/api/rtkApi';
+import { CreateArticleFormSchema } from '@/pages/CreateArticlePage';
+import { UpdateArticleSchema } from '@/features/updateArticle';
+
 
 export interface StateSchema {
     counter: CounterSchema
@@ -26,6 +29,8 @@ export interface StateSchema {
     addCommentForm?: AddCommentFormSchema
     articlesPage?: ArticlesPageSchema
     articleDetailsPage?: ArticleDetailsPageSchema
+    newArticle?: CreateArticleFormSchema
+    updatedArticle?: UpdateArticleSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

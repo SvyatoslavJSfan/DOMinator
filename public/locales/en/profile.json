@@ -16,5 +16,8 @@
      "Некорректный возраст": "The age must be a positive integer",
      "Проверьте правильность написания страны": "Check the country",
      "Имя и фамилия обязательны": "Firs name and last name are obligatory",
-     "Данные не могут быть пустыми": "Data must not be empty"
+     "Данные не могут быть пустыми": "Data must not be empty",
+     "Введите имя пользователя": "Enter user's name",
+     "Введите ссылку на аватар": "Enter the link to the avatar",
+     "Город": "City/town"
 }
