@@ -1,9 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 import { ArticleType, ArticleBlockType } from '../../model/consts/articleConsts';
 import { Article } from '../../../../entities/Article/model/types/article';
 import { ArticleDetails } from './ArticleDetails';
+import { articleDetailsReducer } from '../../model/slice/ArticleDetailsSlice';
 
 
 const meta: Meta<typeof ArticleDetails> = {
@@ -24,13 +26,14 @@ const article: Article = {
     'id': '1',
     'title': 'Javascript news',
     'subtitle': 'Что нового в JS за 2022 год?',
-    'img': 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+    'img': '',
     'views': 1022,
     'createdAt': '26.02.2022',
     'type': [ArticleType.IT],
     user: {
         id: '1',
         username: 'Slava',
+        avatar: '',
     },
     'blocks': [
         {
@@ -60,7 +63,7 @@ const article: Article = {
         {
             'id': '2',
             'type': ArticleBlockType.IMAGE,
-            'src': 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            'src': '',
             'title': 'Рисунок 1 - скриншот сайта'
         },
         {
@@ -80,7 +83,7 @@ const article: Article = {
         {
             'id': '8',
             'type': ArticleBlockType.IMAGE,
-            'src': 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            'src': '',
             'title': 'Рисунок 1 - скриншот сайта'
         },
         {
@@ -96,6 +99,11 @@ const article: Article = {
 
 export const Normal: Story = {
     args: {},
+    parameters: {
+        loki: {
+            waitFor: 500,
+        },
+    },
 };
 
 Normal.decorators = [
@@ -103,7 +111,8 @@ Normal.decorators = [
         articleDetails: {
             data: article
         }
-    })
+    }, { articleDetails: articleDetailsReducer }),
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
 ]
 
 export const Loading: Story = {
@@ -115,7 +124,7 @@ Loading.decorators = [
         articleDetails: {
             isLoading: true
         }
-    })
+    }, { articleDetails: articleDetailsReducer })
 ]
 
 export const Error: Story = {
@@ -127,5 +136,5 @@ Error.decorators = [
         articleDetails: {
             error: 'error'
         }
-    })
+    }, { articleDetails: articleDetailsReducer })
 ]

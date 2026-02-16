@@ -7,7 +7,7 @@ import { Article, ArticleType } from '../../../../entities/Article';
 
 const article: Article = {
     id: '1',
-    img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+    img: '',
     createdAt: 'Дата создания',
     views: 123,
     user: { id: '1', username: 'Имя пользователя' },

@@ -1,28 +1,18 @@
+import { rest } from 'msw';
 import type { Meta, StoryObj } from '@storybook/react';
 import ArticleDetailsPage from './ArticleDetailsPage';
 import { Article } from '../../../../entities/Article/model/types/article';
 import { ArticleType } from '@/entities/Article';
 import { ArticleBlockType } from '@/entities/Article';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-
-
-
-const meta: Meta<typeof ArticleDetailsPage> = {
-    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
-    component: ArticleDetailsPage,
-    parameters: {},
- 
-    tags: ['autodocs'],
- 
-    args: {
-    },
-}
+import { articleDetailsReducer } from '../../../../entities/Article/model/slice/ArticleDetailsSlice';
+import { articleDetailsPageReducer } from '../../model/slices';
 
 const article: Article =     {
     'id': '1',
     'title': 'Javascript news',
     'subtitle': 'Что нового в JS за 2022 год?',
-    'img': 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+    'img': '',
     'views': 1022,
     'createdAt': '26.02.2022',
     'type': [ArticleType.IT],
@@ -58,7 +48,7 @@ const article: Article =     {
         {
             'id': '2',
             'type': ArticleBlockType.IMAGE,
-            'src': 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            'src': '',
             'title': 'Рисунок 1 - скриншот сайта'
         },
         {
@@ -78,7 +68,7 @@ const article: Article =     {
         {
             'id': '8',
             'type': ArticleBlockType.IMAGE,
-            'src': 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            'src': '',
             'title': 'Рисунок 1 - скриншот сайта'
         },
         {
@@ -91,6 +81,33 @@ const article: Article =     {
         }
     ]
 }
+
+const meta: Meta<typeof ArticleDetailsPage> = {
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
+    component: ArticleDetailsPage,
+    parameters: {
+        msw: {
+            handlers: [
+                rest.get('https://testapi.ru/article/1', (req, res, ctx) => res(
+                    ctx.status(200),
+                    ctx.set('x-total-count', String(1)),
+                    ctx.json(article),
+                )),
+                rest.get('https://testapi.ru/articles', (req, res, ctx) => res(
+                    ctx.status(200),
+                    ctx.json([article]),
+                )),
+            ],
+        },
+    },
+ 
+    tags: ['autodocs'],
+ 
+    args: {
+    },
+}
+
+
 
 export default meta;
 type Story = StoryObj<typeof ArticleDetailsPage>;
@@ -107,6 +124,9 @@ Normal.decorators = [
         articleDetails: {
             data: article,
         },
+    }, { 
+        articleDetails: articleDetailsReducer,
+        articleDetailsPage: articleDetailsPageReducer,
     }),
 ];
 

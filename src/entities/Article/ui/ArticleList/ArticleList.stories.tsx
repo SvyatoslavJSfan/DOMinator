@@ -3,18 +3,24 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ArticleType, ArticleView, ArticleBlockType } from '../../model/consts/articleConsts';
 import { Article } from '../../../../entities/Article/model/types/article';
 import { ArticleList } from './ArticleList';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 
 
 const meta: Meta<typeof ArticleList> = {
     title: 'entities/Article/ArticleList',
     component: ArticleList,
-    parameters: {},
+    parameters: {
+        loki: {
+            waitFor: 500,
+        },
+    },
  
     tags: ['autodocs'],
  
     args: {
     },
+    decorators: [FeaturesFlagsDecorator({ isAppRedesigned: true })],
 };
 
 export default meta;
@@ -24,13 +30,14 @@ const article: Article = {
     'id': '1',
     'title': 'Javascript news',
     'subtitle': 'Что нового в JS за 2022 год?',
-    'img': 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+    'img': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNk+M9QzwAEYBxVSF+FABJADveWkH6oAAAAAElFTkSuQmCC',
     'views': 1022,
     'createdAt': '26.02.2022',
     'type': [ArticleType.IT],
     user: {
         id: '1',
         username: 'Slava',
+        avatar: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNk+M9QzwAEYBxVSF+FABJADveWkH6oAAAAAElFTkSuQmCC',
     },
     'blocks': [
         {
@@ -136,4 +143,6 @@ export const ListBig: Story = {
         view: ArticleView.BIG,
     },
 };
+
+
 

@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
 import { AvatarDropdown } from './AvatarDropdown';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-
+import { UserRole } from '@/entities/User';
 
 
 const meta: Meta<typeof AvatarDropdown> = {
@@ -21,7 +23,23 @@ const meta: Meta<typeof AvatarDropdown> = {
   
     args: {  },
 
-    decorators: [StoreDecorator({})]
+    decorators: [
+        (StoryComponent) => (
+            <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '20px' }}>
+                <StoryComponent />
+            </div>
+        ),
+        StoreDecorator({
+            user: {
+                authData: {
+                    id: '1' ,
+                    username: 'admin',
+                    avatar: 'https://avatars.mds.yandex.net/i?id=f7095e3624e592bb57fd599dda2833d6_l-11842117-images-thumbs&n=13',
+                    roles: [UserRole.ADMIN] ,
+                }
+            }
+        })
+    ]
 }
 
 export default meta;

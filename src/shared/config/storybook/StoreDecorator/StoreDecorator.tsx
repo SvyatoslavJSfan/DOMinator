@@ -7,6 +7,8 @@ import { addCommentFormReducer } from '@/features/addCommentForm/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';
 import { articleDetailsReducer } from '@/entities/Article/testing';
 import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
+import { articlesPageReducer } from '@/pages/ArticlesPage/testing';
+
 
 
 
@@ -15,7 +17,8 @@ const defaultAsyncReducers: ReducersList = {
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsPage: articleDetailsPageReducer
+    articleDetailsPage: articleDetailsPageReducer,
+    articlesPage: articlesPageReducer,
 }
 
 
@@ -23,7 +26,7 @@ export const StoreDecorator = (
     state: DeepPartial<StateSchema>,
     asyncReducers?: ReducersList
 ) => (StoryComponent: StoryFn ) => (
-    <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}>
+    <StoreProvider initialState={state as StateSchema} asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}>
         <StoryComponent/>
     </StoreProvider>
 

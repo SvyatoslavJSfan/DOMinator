@@ -841,7 +841,7 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true,
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       },
       "avatar": "https://avatars.mds.yandex.net/i?id=b71a5978eb1c2142a819691c4114beea_l-11018127-images-thumbs&n=13",
       "jsonSettings": {

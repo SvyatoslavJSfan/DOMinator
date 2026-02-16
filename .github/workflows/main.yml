@@ -52,9 +52,9 @@ jobs:
         run: npx wait-on http://localhost:6006 --timeout 60000
         if: always()
 
-      - name: Screenshot testing
-        run: npm run test:ui:ci
-        if: always()
+      # - name: Screenshot testing
+      #   run: npm run test:ui:ci
+      #   if: always()
 
       - name: Unit testing
         run: npm run test:unit

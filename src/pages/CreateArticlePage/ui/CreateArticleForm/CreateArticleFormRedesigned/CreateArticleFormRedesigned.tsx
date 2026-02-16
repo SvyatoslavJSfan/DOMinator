@@ -184,7 +184,7 @@ const CreateArticleFormRedesigned = memo((props: CreateArticleFormRedesignedProp
     }, [])
 
     const onCancelCreateArticle = useCallback(() => {
-        navigate('/admin')
+        navigate(-1)
     }, [navigate])
 
     return(

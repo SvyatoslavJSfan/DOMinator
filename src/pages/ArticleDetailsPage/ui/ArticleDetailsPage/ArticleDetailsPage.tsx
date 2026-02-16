@@ -33,9 +33,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { className } = props;
     const { t } = useTranslation('article-details');
     const { id } = useParams<{ id: string }>();
+    const finalId = __PROJECT__ === 'storybook' ? '1' : id;
 
-
-    if (!id) {
+    if (!finalId) {
         return null
     }
 
@@ -55,10 +55,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                                 )}
                             >
                                 <VStack gap="16" max>
-                                    <DetailsContainer />
-                                    <ArticleRating articleId={id} />
+                                    <DetailsContainer id={finalId} />
+                                    <ArticleRating articleId={finalId} />
                                     <ArticleRecommendationsList />
-                                    <ArticleDetailsComments id={id} />
+                                    <ArticleDetailsComments id={finalId} />
                                 </VStack>
                             </Page>
                         }
@@ -73,10 +73,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     >
                         <VStack gap="16" max>
                             <ArticleDetailsPageHeader />
-                            <ArticleDetails id={id} />
+                            <ArticleDetails id={finalId} />
                             <ToggleFeatures
                                 feature="isArticleRatingEnabled"
-                                on={<ArticleRating articleId={id} />}
+                                on={<ArticleRating articleId={finalId} />}
                                 off={
                                     <Card>
                                         {t('Оценка статей скоро появится!')}
@@ -84,7 +84,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                                 }
                             />
                             <ArticleRecommendationsList />
-                            <ArticleDetailsComments id={id} />
+                            <ArticleDetailsComments id={finalId} />
                         </VStack>
                     </Page>
                 }

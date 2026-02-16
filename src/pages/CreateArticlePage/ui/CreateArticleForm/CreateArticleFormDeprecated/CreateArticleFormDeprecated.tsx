@@ -18,7 +18,6 @@ import { Input } from '@/shared/ui/deprecated/Input';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Button } from '@/shared/ui/deprecated/Button';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
-import { getRouteArticles } from '@/shared/const/router';
 
 const reducers: ReducersList = {
     newArticle: createArticleFormReducer
@@ -184,7 +183,7 @@ const CreateArticleFormRedesigned = memo((props: CreateArticleFormRedesignedProp
     }, [])
 
     const onCancelCreateArticle = useCallback(() => {
-        navigate(getRouteArticles())
+        navigate(-1)
     }, [navigate])
 
     return(

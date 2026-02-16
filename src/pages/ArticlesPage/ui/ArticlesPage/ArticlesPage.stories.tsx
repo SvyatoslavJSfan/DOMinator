@@ -8,38 +8,14 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticleSortField, ArticleType, ArticleView } from '../../../../entities/Article';
 import { Article, ArticleBlockType } from '../../../../entities/Article';
 import ArticlesPage from './ArticlesPage';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
-
-const meta: Meta<typeof ArticlesPage> = {
-    title: 'pages/ArticlesPage/ArticlesPage',
-    component: ArticlesPage,
-    parameters: {
-        msw: {
-            handlers: [
-                rest.get('https://testapi.ru/articles', (req, res, ctx) => res(
-                    ctx.status(200),
-                    ctx.set('x-total-count', String(articles.length)),
-                    ctx.json(articles),
-                )),
-            ],
-        },
-    },
- 
-    tags: ['autodocs'],
- 
-    args: {
-    },
-};
-
-export default meta;
-
-type Story = StoryObj<typeof ArticlesPage>;
 
 const mockArticle: Article = {
     'id': '1',
     'title': 'Javascript news',
     'subtitle': 'Что нового в JS за 2022 год?',
-    'img': 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+    'img': '',
     'views': 1022,
     'createdAt': '26.02.2022',
     'type': [ArticleType.IT],
@@ -75,7 +51,7 @@ const mockArticle: Article = {
         {
             'id': '2',
             'type': ArticleBlockType.IMAGE,
-            'src': 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            'src': '',
             'title': 'Рисунок 1 - скриншот сайта'
         },
         {
@@ -95,7 +71,7 @@ const mockArticle: Article = {
         {
             'id': '8',
             'type': ArticleBlockType.IMAGE,
-            'src': 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            'src': '',
             'title': 'Рисунок 1 - скриншот сайта'
         },
         {
@@ -116,9 +92,37 @@ const articles = new Array(9)
         id: String(index),
     }))
 
+const meta: Meta<typeof ArticlesPage> = {
+    title: 'pages/ArticlesPage/ArticlesPage',
+    component: ArticlesPage,
+    parameters: {
+        msw: {
+            handlers: [
+                rest.get('https://testapi.ru/articles', (req, res, ctx) => res(
+                    ctx.status(200),
+                    // ctx.set('x-total-count', String(articles.length)),
+                    ctx.json(articles),
+                )),
+            ],
+        },
+    },
+ 
+    tags: ['autodocs'],
+ 
+    args: {
+    },
+};
+
+export default meta;
+
+type Story = StoryObj<typeof ArticlesPage>;
+
+
 export const Normal: Story = {
     args: {},
 };
+
+console.log(articles);
 
 
 Normal.decorators = [
@@ -126,6 +130,7 @@ Normal.decorators = [
         articlesPage: {
             view: ArticleView.SMALL,
             isLoading: false,
+            ids: articles.map((a) => a.id),
             entities: Object.fromEntries(articles.map((a) => [a.id, a])),
             page: 1,
             limit: 9,
@@ -137,5 +142,6 @@ Normal.decorators = [
             type: ArticleType.IT
         },
     }),
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
 ];
 
